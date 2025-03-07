@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronteira</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px;
+            font: normal 20px arial;
+        }
+        p {
+            margin: 10px;
+            font: normal 16px arial;
+        }
+        input {
+            margin-left: 10px;
+            padding: 5px;
+            font: normal 16px arial;
+            width: 200px;
+        }
+        input:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Identificação de Brasileiros e Estrangeiros</h1>
+    <p>Em qual país você nasceu?</p> <input type="text" name="pais" id="pais" placeholder="Digite o nome do país">
+    <input type="button" value="Verificar Nacionalidade" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var pais = document.getElementById('pais').value
+            var res = document.getElementById('res')
+            res.innerHTML = `Seu país de origem é <strong>${pais}</strong>! <br>`
+            if (pais == 'Brasil' || pais == 'brasil' || pais == 'BRASIL') {
+                res.innerHTML += 'Você é <strong>brasileiro</strong>!'
+            } else {
+                res.innerHTML += 'Você é <strong>estrangeiro</strong>!'
+            }
+        }
+    </script>
+</body>
+</html>
