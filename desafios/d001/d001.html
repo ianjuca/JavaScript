@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #c4b481;
+            color: white;
+        }
+        header h1 {
+            font-size:3em;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            height: 400px;
+            background-color: #f2f2f2;
+            margin: 50px auto;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        div p {
+            font-size: 20px;
+            margin-top: 20px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        div img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+    <main>
+        <div>
+            <p>Agora são ${hora} horas.</p>
+            <img src="imagens/pexels-pixabay-533961.jpg" alt="imagem do dia">
+        </div>
+    </main>
+    <footer>
+        <p> &copy; ianjuca </p>
+    </footer>
+    <script>
+        let msg = document.querySelector('p')
+        let img = document.querySelector('img')
+        let hora = new Date().getHours()
+        msg.innerHTML = `Agora são ${hora} horas.`
+        if (hora >= 0 && hora < 12) {
+            img.src = 'imagens/manha.jpg'
+            document.body.style.backgroundColor = '#f4a460'
+        } else if (hora >= 12 && hora < 18) {
+            img.src = 'imagens/tarde.jpg'
+            document.body.style.backgroundColor = '#ff8c00'
+        } else {
+            img.src = 'imagens/noite.jpg'
+            document.body.style.backgroundColor = '#483d8b'
+        }
+    </script>
+</body>
+</html>
