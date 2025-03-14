@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(86, 143, 228);
+}
+
+header > h1 {
+    color: white;
+    text-align: center;
+    margin: 30px;
+}
+
+main {
+    background-color: white;
+    margin: auto;
+    width: 550px;
+    border-radius: 10px;
+    min-height: 10px;
+}
+
+div#dados {
+    padding: 30px;
+    font: normal 18px arial;
+}
+
+div#res {
+    padding: 30px;
+    font: normal 18px arial;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    margin: 30px;
+    font: bold 18px arial;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+footer a:hover {
+    opacity: 0.7;
+}
