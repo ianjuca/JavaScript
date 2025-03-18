@@ -1,0 +1,46 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(35, 142, 214);
+}
+
+header > h1 {
+    text-align: center;
+    color: white;
+    font: bold 2em arial;
+    margin: 30px;
+}
+
+main {
+    background-color: white;
+    width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+div#dados > p {
+    font: normal 20px arial;
+    margin-bottom: 30px;
+}
+div#res {
+    font: normal 20px arial;
+}
+footer {
+    text-align: center;
+    margin: 30px;
+    font: bold 20px arial;
+    color: white;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+footer a:hover {
+    opacity: 0.7;
+}
